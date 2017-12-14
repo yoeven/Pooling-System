@@ -12,7 +12,8 @@ public class Example : MonoBehaviour {
         Pooler.instance.CreatePool(Prefab.name, Prefab, 100);
         g = Pooler.instance.GetPoolItem(Prefab.name, transform.position, Quaternion.identity);
         Pooler.instance.DisablePoolItem(g,5);
-        Invoke("StopDisable", 5);
+        Invoke("StopDisable", 4);
+        GameObject t =  Pooler.instance.GetPoolItem("Sphere", Vector3.one, Quaternion.identity);
     }
 
     void StopDisable()
